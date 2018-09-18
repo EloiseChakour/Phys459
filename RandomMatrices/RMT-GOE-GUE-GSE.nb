@@ -10,91 +10,118 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3834,        114]
-NotebookOptionsPosition[      3481,         98]
-NotebookOutlinePosition[      3823,        113]
-CellTagsIndexPosition[      3780,        110]
+NotebookDataLength[      5199,        144]
+NotebookOptionsPosition[      4774,        125]
+NotebookOutlinePosition[      5116,        140]
+CellTagsIndexPosition[      5073,        137]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
  RowBox[{
-  RowBox[{"Which", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"Mod", "[", 
-       RowBox[{"N", ",", "8"}], "]"}], "\[Equal]", "2"}], "||", 
-     RowBox[{
-      RowBox[{"Mod", "[", 
-       RowBox[{"N", ",", "8"}], "]"}], "\[Equal]", "6"}]}], ",", 
-    RowBox[{"RMT", "=", "GUE"}], ",", 
-    RowBox[{
-     RowBox[{"Mod", "[", 
-      RowBox[{"N", ",", "8"}], "]"}], "\[Equal]", "0"}], ",", 
-    RowBox[{"RMT", "=", "GOE"}], ",", 
-    RowBox[{
-     RowBox[{"Mod", "[", 
-      RowBox[{"N", ",", "8"}], "]"}], "\[Equal]", "4"}], ",", 
-    RowBox[{"RMT", "=", "GSE"}]}], "]"}], ";"}]], "Input",
+  RowBox[{"n", " ", "=", " ", "20"}], ";"}]], "Input",
  CellChangeTimes->{{3.746272618460495*^9, 3.7462726232896757`*^9}, 
    3.7462726688363094`*^9, {3.7462727237495775`*^9, 3.746272728296172*^9}, {
    3.7462727670655932`*^9, 3.746272774147427*^9}, {3.7462734647693653`*^9, 
    3.746273465159665*^9}, {3.7462735912552476`*^9, 3.74627360194823*^9}, {
    3.746273674648754*^9, 3.7462736777565346`*^9}, {3.7462737146191263`*^9, 
-   3.7462738974295716`*^9}}],
+   3.7462738974295716`*^9}, {3.7462741478987246`*^9, 
+   3.7462741669272575`*^9}, {3.746274526801629*^9, 3.7462745601519547`*^9}}],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
+  RowBox[{
+   RowBox[{"Which", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"n", ",", "8"}], "]"}], "\[Equal]", "2"}], "||", 
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{"n", ",", "8"}], "]"}], "\[Equal]", "6"}]}], ",", 
+     RowBox[{"RMT", "=", "GUE"}], ",", 
+     RowBox[{
+      RowBox[{"Mod", "[", 
+       RowBox[{"n", ",", "8"}], "]"}], "\[Equal]", "0"}], ",", 
+     RowBox[{"RMT", "=", "GOE"}], ",", 
+     RowBox[{
+      RowBox[{"Mod", "[", 
+       RowBox[{"n", ",", "8"}], "]"}], "\[Equal]", "4"}], ",", 
+     RowBox[{"RMT", "=", "GSE"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
    "Matrices", " ", "from", " ", "the", " ", "Gaussian", " ", "orthogonal", 
     " ", "ensemble", " ", 
-    RowBox[{"(", "GOE", ")"}], " ", "are", " ", "symmetric"}], "*)"}], 
-  "\[IndentingNewLine]", 
+    RowBox[{"(", "GOE", ")"}], " ", "are", " ", "symmetric"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
    RowBox[{"GOE", "=", 
     RowBox[{"RandomVariate", "[", 
-     RowBox[{"GaussianOrthogonalMatrixDistribution", "[", "N", "]"}], "]"}]}],
-    ";"}]}]], "Input",
- CellChangeTimes->{{3.746272618460495*^9, 3.7462726232896757`*^9}, 
-   3.7462726688363094`*^9, {3.7462727237495775`*^9, 3.746272728296172*^9}, {
-   3.7462727670655932`*^9, 3.746272774147427*^9}, {3.7462734647693653`*^9, 
-   3.746273465159665*^9}, {3.7462735912552476`*^9, 3.74627360194823*^9}, {
-   3.7462739183523626`*^9, 3.746273919389601*^9}}],
-
-Cell[BoxData[
- RowBox[{
+     RowBox[{"GaussianOrthogonalMatrixDistribution", "[", "n", "]"}], "]"}]}],
+    ";"}], "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
    "Matrices", " ", "from", " ", "the", " ", "Gaussian", " ", "unitary", " ", 
     "ensemble", " ", 
-    RowBox[{"(", "GUE", ")"}], " ", "are", " ", "Hermitian"}], "*)"}], 
-  "\[IndentingNewLine]", 
+    RowBox[{"(", "GUE", ")"}], " ", "are", " ", "Hermitian"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
    RowBox[{"GUE", "=", 
     RowBox[{"RandomVariate", "[", 
-     RowBox[{"GaussianUnitaryMatrixDistribution", "[", "N", "]"}], "]"}]}], 
-   ";"}]}]], "Input",
- CellChangeTimes->{{3.7462727935578365`*^9, 3.746272807992544*^9}, {
-  3.7462739228668847`*^9, 3.7462739235200233`*^9}}],
-
-Cell[BoxData[
- RowBox[{
+     RowBox[{"GaussianUnitaryMatrixDistribution", "[", "n", "]"}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
    "Matrices", " ", "from", " ", "the", " ", "Gaussian", " ", "symplectic", 
     " ", "ensemble", " ", 
     RowBox[{"(", "GSE", ")"}], " ", "are", " ", "symplectic", " ", 
-    "Hermitian"}], "*)"}], "\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{"GSE", "=", 
-    RowBox[{"RandomVariate", "[", 
-     RowBox[{"GaussianSymplecticMatrixDistribution", "[", "N", "]"}], "]"}]}],
-    ";"}]}]], "Input",
+    "Hermitian"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"GSE", "=", 
+   RowBox[{"RandomVariate", "[", 
+    RowBox[{"GaussianSymplecticMatrixDistribution", "[", "n", "]"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.746272618460495*^9, 3.7462726232896757`*^9}, 
+   3.7462726688363094`*^9, {3.7462727237495775`*^9, 3.746272728296172*^9}, {
+   3.7462727670655932`*^9, 3.746272774147427*^9}, {3.7462734647693653`*^9, 
+   3.746273465159665*^9}, {3.7462735912552476`*^9, 3.74627360194823*^9}, {
+   3.746273674648754*^9, 3.7462736777565346`*^9}, {3.7462737146191263`*^9, 
+   3.7462738974295716`*^9}, {3.7462741478987246`*^9, 3.746274183902728*^9}, {
+   3.7462742255146675`*^9, 3.7462742265726757`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"RMT", ";"}], "\[IndentingNewLine]", 
+ RowBox[{"typeRMT", " ", "=", " ", 
+  RowBox[{"Which", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SymmetricMatrixQ", "[", "RMT", "]"}], "\[Equal]", "True"}], ",",
+     " ", "\"\<GOE\>\"", ",", 
+    RowBox[{
+     RowBox[{"HermitianMatrixQ", "[", "RMT", "]"}], "\[Equal]", "True"}], 
+    ",", "\"\<GUE\>\"", ",", 
+    RowBox[{
+     RowBox[{"HermitianMatrixQ", "[", "RMT", "]"}], "\[Equal]", "True"}], 
+    ",", "\"\<GSE\>\""}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7462727935578365`*^9, 3.746272807992544*^9}, {
+   3.7462739228668847`*^9, 3.7462739235200233`*^9}, {3.7462741241960196`*^9, 
+   3.7462741392272344`*^9}, 3.7462742361199093`*^9, {3.7462742998368697`*^9, 
+   3.746274441615924*^9}, {3.746274494467942*^9, 3.7462745128920393`*^9}, {
+   3.746274650030697*^9, 3.7462746733396196`*^9}}],
+
+Cell[BoxData["\<\"GUE\"\>"], "Output",
+ CellChangeTimes->{{3.7462745195933247`*^9, 3.7462745636263804`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.7462728276153355`*^9, 3.7462728493968277`*^9}, {
-  3.7462739263378067`*^9, 3.746273926909648*^9}}]
+   3.7462739263378067`*^9, 3.746273926909648*^9}, 3.7462741321465015`*^9}]
 },
 WindowSize->{638, 628},
 WindowMargins->{{-7, Automatic}, {Automatic, 0}},
@@ -112,10 +139,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1028, 25, 52, "Input"],
-Cell[1589, 47, 773, 17, 72, "Input"],
-Cell[2365, 66, 541, 14, 72, "Input"],
-Cell[2909, 82, 568, 14, 72, "Input"]
+Cell[558, 20, 581, 9, 31, "Input"],
+Cell[1142, 31, 2444, 62, 232, "Input"],
+Cell[CellGroupData[{
+Cell[3611, 97, 861, 18, 92, "Input"],
+Cell[4475, 117, 108, 1, 31, "Output"]
+}, Open  ]],
+Cell[4598, 121, 172, 2, 31, "Input"]
 }
 ]
 *)
